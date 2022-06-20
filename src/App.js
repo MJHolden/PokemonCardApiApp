@@ -103,7 +103,7 @@ function App() {
               key={card.id}
               onClick={handleCardClick}
             >
-              <img src={card.images.small} className="fadeIn2" />
+              <img src={card.images.small} className="fadeIn2" alt="" />
               <div
                 style={{
                   position: "absolute",
