@@ -151,7 +151,7 @@ function App() {
           justifyContent: "center",
           marginTop: "5rem",
           bottom: "0",
-          position: "relative",
+          position: "sticky",
         }}
       >
         <Button onClick={handleRandomClick} disabled={isNewCardButtonDisabled}>
@@ -165,12 +165,13 @@ function App() {
           onChange={handleInputChange}
         ></input>
         <br />
+        <h3 style={{ color: "white", textAlign: "center" }}>
+          Cards left:{state.deck.length}
+        </h3>
       </div>
-      <h3 style={{ color: "white", textAlign: "center" }}>
-        Cards left:{state.deck.length}
-      </h3>
+
       <p style={{ color: "red", textAlign: "center" }}>
-        {isNewCardButtonDisabled && "NO CARDS LEFT!"}
+        {isNewCardButtonDisabled && "NOT ENOUGH CARDS LEFT!"}
       </p>
     </>
   );
